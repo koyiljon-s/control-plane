@@ -54,4 +54,4 @@ The service will be available at `http://localhost:8000`.
 - `DB_PASSWORD` - Database password
 - `DB_NAME` - Database name
 - `JWT_SECRET` - JWT signing secret
-- `PORT` - Application port (default: 8080)
+- `PORT` - Application port (default: 8000)

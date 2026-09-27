@@ -23,5 +23,5 @@ COPY --from=builder /go-app .
 # Copy .env if needed (or rely on docker-compose env_file)
 # COPY .env .
 
-EXPOSE 8080
+EXPOSE 8000
 CMD ["./go-app"]

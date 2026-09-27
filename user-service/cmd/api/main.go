@@ -28,6 +28,10 @@ func main() {
 	// Create Gin router
 	r := gin.Default() 
 
+	// Service status
+	r.GET("/", handler.Health)
+	r.GET("/health", handler.Health)
+
 	// Public routes
 	api := r.Group("/api")
 	{
@@ -49,7 +53,7 @@ func main() {
 		protected.GET("/users/:id", userHandler.GetUserByID)
     }
 
-	log.Println("Server running on http://localhost:8080")
+	log.Println("Server running on http://localhost:8000")
 	if err := r.Run(":8000"); err != nil {
 		log.Fatal("Server failed to start:", err)
 	}
